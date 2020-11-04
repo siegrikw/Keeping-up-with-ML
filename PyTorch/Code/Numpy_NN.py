@@ -73,6 +73,8 @@ class numpy_Model(object):
 
 def fit_a_line():
 
+    '''Fit points along the line y = 2*X+noise line'''
+    np.random.seed(32)
     #N - Batch size for training
     #input_dim - size of the input dimensions
     #out_dim - number of classes (output dimensions)
@@ -82,7 +84,9 @@ def fit_a_line():
 
     #Create some random data
     X = np.random.randn(N,input_dim)
-    Y = X*2
+    noise = np.random.randn(N,input_dim)
+    Y = X*2 +noise
+
     print(f"Input Data Shape: {X.shape}, Target Shape: {Y.shape}")
 
     #create the model
@@ -112,11 +116,12 @@ def fit_a_line():
     plt.scatter(X,Y)
     plt.scatter(X,y_pred)
 
+
 def fit_multi_dim_case():
 
     '''Expecting an input dimension of 1000 features in batchs of 64, where our hiden layers
     have 1000 neurons, and we are expecting an output vector of size 10 (10-classes)'''
-
+    np.random.seed(32)
     #N - Batch size for training
     #input_dim - size of the input dimensions
     #out_dim - number of classes (output dimensions)
