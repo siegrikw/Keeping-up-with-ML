@@ -13,3 +13,8 @@ Use cases and examples I used to learn PyTorch and keep up with the most recent 
 ###### Feed-Forward Neural Network
 ###### Convolutional Neural Network
 ###### Transformers
+
+```python
+def test():
+  print('Test')
+```
