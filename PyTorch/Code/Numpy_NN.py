@@ -46,6 +46,7 @@ class numpy_Model(object):
     def backwards(self,x,y,y_pred):
 
         #Derivative of x^2 -> 2x where x -> (y_pred-y)
+        #Change this w.r.t the output function
         grad_y_pred = 2.0 * (y_pred-y)
 
         #Chain Rule for backprop w.r.t loss
